@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047471451A3C709A006FD502 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047471441A3C709A006FD502 /* BaseNavigationController.m */; };
 		0F1328EB1206374800C7C87C /* itemImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F1328EA1206374800C7C87C /* itemImage.png */; };
 		0F1328EE120637BC00C7C87C /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1328ED120637BC00C7C87C /* ItemViewController.m */; };
 		0F2C054812068283009D2ED9 /* itemImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2C054712068283009D2ED9 /* itemImage@2x.png */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047471431A3C709A006FD502 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		047471441A3C709A006FD502 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		0F1328EA1206374800C7C87C /* itemImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itemImage.png; path = imgs/itemImage.png; sourceTree = "<group>"; };
 		0F1328EC120637BC00C7C87C /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		0F1328ED120637BC00C7C87C /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				0F975C2D122B0E8300F678EB /* RootViewController.m */,
 				0F1328EC120637BC00C7C87C /* ItemViewController.h */,
 				0F1328ED120637BC00C7C87C /* ItemViewController.m */,
+				047471431A3C709A006FD502 /* BaseNavigationController.h */,
+				047471441A3C709A006FD502 /* BaseNavigationController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -218,7 +223,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MyLauncher" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -260,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				047471451A3C709A006FD502 /* BaseNavigationController.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				0F1328EE120637BC00C7C87C /* ItemViewController.m in Sources */,
 				0F975C2E122B0E8300F678EB /* RootViewController.m in Sources */,
@@ -309,13 +315,13 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -323,7 +329,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;

@@ -83,7 +83,8 @@
 {
 	CGSize retValue;
 	CGFloat rectWidth, rectHeight;
-	CGSize stringSize = [badgeString sizeWithFont:[UIFont boldSystemFontOfSize:12]];
+    CGSize stringSize = [badgeString sizeWithAttributes:@{ NSFontAttributeName : [UIFont boldSystemFontOfSize:12]}];
+    
 	CGFloat flexSpace;
 	if ([badgeString length]>=2) {
 		flexSpace = [badgeString length];
@@ -110,10 +111,6 @@
 {
 	return [[self alloc] initWithString:badgeString withStringColor:stringColor withInsetColor:insetColor withBadgeFrame:badgeFrameYesNo withBadgeFrameColor:frameColor withScale:scale withShining:shining];
 }
-
-
-
- 
 
 // Draws the Badge with Quartz
 -(void) drawRoundedRectWithContext:(CGContextRef)context withRect:(CGRect)rect
@@ -232,8 +229,8 @@
 			sizeOfFont += sizeOfFont*0.20;
 		}
 		UIFont *textFont = [UIFont boldSystemFontOfSize:sizeOfFont];
-		CGSize textSize = [self.badgeText sizeWithFont:textFont];
-		[self.badgeText drawAtPoint:CGPointMake((rect.size.width/2-textSize.width/2), (rect.size.height/2-textSize.height/2)) withFont:textFont];
+		CGSize textSize = [self.badgeText sizeWithAttributes:@{ NSFontAttributeName : textFont}];
+        [self.badgeText drawAtPoint:CGPointMake((rect.size.width/2-textSize.width/2), (rect.size.height/2-textSize.height/2)) withAttributes:@{ NSFontAttributeName : textFont}];
 	}
 	
 }
